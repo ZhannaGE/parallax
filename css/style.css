@@ -1,0 +1,109 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --index: calc(1vw + 1vh);
+    --transition: transform .75s cubic-bezier(.075, .5, 0, 1);
+    --scrollY: 10px;
+}
+
+body {
+    background-color: #010101;
+    font-family: "Brush Script MT", serif;
+}
+
+.main-header {
+    position: relative;
+}
+
+.main-header::after {
+    content: '';
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: calc(var(--index) * 10);
+    background-image: url(../img/ground.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: calc(var(--index) * -5.3);
+}
+
+.layers {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.layer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+    z-index: 2;
+    transition: var(--transition);
+}
+
+.layers__base {
+    transform: translate3d(0, calc(var(--scrollY) / 2.6), 0);
+    z-index: 0;
+    transition: var(--transition);
+}
+
+.layers__front {
+    transform: translate3d(0, calc(var(--scrollY) / 5.7), 0);
+}
+
+.layer__header {
+    z-index: 1;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 30px;
+    color: white;
+    text-shadow: 0 0 25px #f6c633;
+    letter-spacing: 5px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.main-article {
+    --main-article-transform: translate3d(0, calc(var(--scrollY) / -15.5), 0);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    top: -1px;
+    z-index: 10;
+    padding-top: 20px;
+}
+
+.item {
+    background-color: rgba(195, 224, 186, 0.3);
+    width: 300px;
+    height: 300px;
+    border-radius: 10%;
+    object-fit: contain;
+    margin: 20px;
+}
+
+
+.item-left_column1, .item-right_column1 {
+    margin-bottom: 50px;
+}
+
+

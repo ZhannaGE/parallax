@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>parallax</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+<header class="main-header">
+  <div class="layers">
+    <p class="layer__header">Гиганты древности</p>
+    <div class="layer layers__base" style="background-image: url(img/step1.png);"></div>
+    <div class="layer" id="left" style="background-image: url(img/step2.png);"></div>
+    <div class="layer" id="right" style="background-image: url(img/step3.png);"></div>
+    <div class="layer layers__front" style="background-image: url(img/step4.png);"></div>
+  </div>
+</header>
+
+<section class="main-article" style="background-image: url(img/step5.jpg);">
+  <div class="item-left">
+    <div class="item-left_column1"><img class="item" src="img/d1.png" alt="d1"><img class="cloud"
+                                                                                    src="img/bubble-left.png"
+                                                                                    width="300" height="300"
+                                                                                    alt="bubble">
+    </div>
+    <div class="item-left_column2"><img class="item" src="img/d2.png" alt="d2"><img class="cloud"
+                                                                                    src="img/bubble-left2.png"
+                                                                                    width="300" height="300"
+                                                                                    alt="bubble">
+    </div>
+  </div>
+  <div class="item-right">
+    <div class="item-right_column1"><img class="cloud" src="img/bubble-right.png" width="350" height="300" alt="bubble">
+      <img class="item" src="img/d3.png" alt="d3">
+    </div>
+    <div class="item-right_column2"><img class="cloud" src="img/bubble-right2.png" width="350" height="300" alt="bubble">
+      <img class="item" src="img/d4.png" alt="d4">
+    </div>
+  </div>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>
